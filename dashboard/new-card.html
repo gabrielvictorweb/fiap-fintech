@@ -11,8 +11,10 @@
         <link rel="stylesheet" href="../css/global.css">
         <link rel="stylesheet" href="../css/sidebars.css">
         <link rel="stylesheet" href="../css/dashboard.css">
+        <link rel="stylesheet" href="../css/new-card.css">
+        <link rel="stylesheet" href="../css/cards.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
         <link rel="shortcut icon" href="../images/logo-2.png">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     </head>
     <body>
         <main>
@@ -24,8 +26,8 @@
                 </a>
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active" aria-current="page">
+                    <li>
+                        <a href="index.html" class="nav-link link-dark">
                             <i class="bi bi-house"></i>
                             Dashboard
                         </a>
@@ -36,8 +38,8 @@
                             Meus Gastos
                         </a>
                     </li>
-                    <li>
-                        <a href="credit-cards.html" class="nav-link link-dark">
+                    <li class="nav-item">
+                        <a href="credit-cards.html" class="nav-link active" aria-current="page">
                             <i class="bi bi-credit-card-2-front-fill"></i>
                             Meus Cartões
                         </a>
@@ -58,8 +60,8 @@
                     </div>
                 </a>
                 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active" aria-current="page">
+                    <li>
+                        <a href="index.html" class="nav-link" aria-current="page">
                             <i class="bi bi-house"></i>
                         </a>
                     </li>
@@ -68,8 +70,8 @@
                             <i class="bi bi-currency-exchange"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="credit-cards.html" class="nav-link link-dark">
+                    <li class="nav-item">
+                        <a href="credit-cards.html" class="nav-link link-dark active">
                             <i class="bi bi-credit-card-2-front-fill"></i>
                         </a>
                     </li>
@@ -85,7 +87,7 @@
 
             <div class="container-fluid h-100 overflow-auto">
                 <nav class="navbar navbar-light">
-                    <a class="navbar-brand">Dashboard</a>
+                    <a class="navbar-brand">Cartões de Crédito</a>
                     <div class="dropdown">
                         <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser4" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
@@ -98,24 +100,42 @@
                         </ul>
                     </div>
                 </nav>
-                <div id="charts">
-                    <div class="box">
-                        <h1>Despesas</h1>
-                        <canvas id="chartDespesa"></canvas>
+                <div class="card-wrapper"></div>
+                <form action="credit-cards.html">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">NUMERO DO CARTÃO</label>
+                        <input required type="tel" class="form-control" name="number" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NUMERO DO CARTÃO">
                     </div>
-                    <div class="box">
-                        <h1>Receitas</h1>
-                        <canvas id="chartReceita"></canvas>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">NOME COMPLETO</label>
+                        <input required placeholder="NOME COMPLETO" type="text" name="name" class="form-control" id="exampleInputPassword1">
                     </div>
-                    <div class="box">
-                        <h1>Receitas x Despesas nos ultimos 6 meses</h1>
-                        <canvas id="chartMonth"></canvas>
+                    <div class="form-group">
+                        <label for="exampleCheck1">VALIDADE</label>
+                        <input required placeholder="MM/YY" type="tel" name="expiry" class="form-control" id="exampleCheck1">
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="exampleCheck1">CVV</label>
+                        <input required placeholder="CVC" type="number" name="cvc" class="form-control" id="exampleCheck2">
+                    </div>
+                    <button type="submit" class="btn btn-primary">ADICIONAR</button>
+                </form>
             </div>
         </main>
         <script src="../scripts/bootstrap.bundle.min.js"></script>
         <script src="../scripts/sidebars.js"></script>
-        <script src="../scripts/dashboard.js"></script>
+        <script src="../scripts/card.js"></script>
+        <script>
+            var c = new Card({
+                form: document.querySelector('form'),
+                container: '.card-wrapper',
+                placeholders: {
+                    number: '•••• •••• •••• ••••',
+                    name: 'Nome Completo',
+                    expiry: '••/••',
+                    cvc: '•••'
+                },
+            });
+        </script>
     </body>
 </html>

@@ -1,0 +1,16 @@
+form {
+    max-width: 400px;
+    margin: 20px auto 0 auto;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+form .form-group:last-of-type {
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
