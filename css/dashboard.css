@@ -11,6 +11,36 @@
     display: none !important;
 }
 
+#charts {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+}
+
+.box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    overflow: auto;
+}
+
+.box h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.box::-webkit-scrollbar {
+     width: 0.5em;
+     height: 8px;
+}
+
+.box::-webkit-scrollbar-thumb {
+     background: #edf2f7;
+     border-radius: 50px;
+}
+
+
 @media screen and (min-width: 768px) {
     .desktop-menu {
         display: flex !important;
@@ -24,5 +54,9 @@
         width: 100%;
         max-width: 150px !important;
         margin: 0 auto;
+    }
+
+    #charts {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
