@@ -7,10 +7,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Fintech - Dashboard</title>
         <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <link rel="stylesheet" href="../css/global.css">
         <link rel="stylesheet" href="../css/sidebars.css">
         <link rel="stylesheet" href="../css/dashboard.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     </head>
     <body>
         <main>
@@ -24,48 +25,29 @@
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link active" aria-current="page">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                            <i class="bi bi-house"></i>
                             Dashboard
                         </a>
                     </li>
                     <li>
                         <a href="#" class="nav-link link-dark">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                            Orders
+                            <i class="bi bi-currency-exchange"></i>
+                            Meus Gastos
                         </a>
                     </li>
                     <li>
                         <a href="#" class="nav-link link-dark">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-                            Products
+                            <i class="bi bi-credit-card-2-front-fill"></i>
+                            Meus Cartões
                         </a>
                     </li>
                     <li>
                         <a href="#" class="nav-link link-dark">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                            Customers
+                            <i class="bi bi-newspaper"></i>
+                            Extrato
                         </a>
                     </li>
                 </ul>
-                <hr>
-                <div class="dropdown">
-                    <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                        <strong>mdo</strong>
-                    </a>
-                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                        <li><a class="dropdown-item" href="#">Configurações</a></li>
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sair</a></li>
-                    </ul>
-                </div>
             </div>
 
             <div class="mobile-menu d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
@@ -76,51 +58,63 @@
                 </a>
                 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active py-3 border-bottom" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
-                            <svg class="bi" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"/></svg>
+                        <a href="#" class="nav-link active" aria-current="page">
+                            <i class="bi bi-house"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link py-3 border-bottom" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
-                            <svg class="bi" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="bi bi-currency-exchange"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link py-3 border-bottom" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
-                            <svg class="bi" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"/></svg>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="bi bi-credit-card-2-front-fill"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link py-3 border-bottom" title="Products" data-bs-toggle="tooltip" data-bs-placement="right">
-                            <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"/></svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
-                            <svg class="bi" width="24" height="24" role="img" aria-label="Customers"><use xlink:href="#people-circle"/></svg>
+                        <a href="#" class="nav-link link-dark">
+                            <i class="bi bi-newspaper"></i>
                         </a>
                     </li>
                 </ul>
-                <div class="dropdown border-top">
-                    <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
-                    </a>
-                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                        <li><a class="dropdown-item" href="#">Configurações</a></li>
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sair</a></li>
-                    </ul>
-                </div>
             </div>
 
             <div class="b-example-divider"></div>
 
-            <div class="container-fluid">
-                ...
+            <div class="container-fluid h-100 overflow-auto">
+                <nav class="navbar navbar-light">
+                    <a class="navbar-brand">Dashboard</a>
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser4" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="dropdownUser4">
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sair</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="charts">
+                    <div class="box">
+                        <h1>Despesas</h1>
+                        <canvas id="chartDespesa"></canvas>
+                    </div>
+                    <div class="box">
+                        <h1>Receitas</h1>
+                        <canvas id="chartReceita"></canvas>
+                    </div>
+                    <div class="box">
+                        <h1>Receitas x Despesas nos ultimos 6 meses</h1>
+                        <canvas id="chartMonth"></canvas>
+                    </div>
+                </div>
             </div>
         </main>
         <script src="../scripts/bootstrap.bundle.min.js"></script>
         <script src="../scripts/sidebars.js"></script>
+        <script src="../scripts/dashboard.js"></script>
     </body>
 </html>
