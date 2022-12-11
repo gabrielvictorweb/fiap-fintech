@@ -1,0 +1,28 @@
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 30px;
+    margin: 0 auto;
+}
+
+.desktop-menu {
+    display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-menu {
+        display: flex !important;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .logo img {
+        width: 100%;
+        max-width: 150px !important;
+        margin: 0 auto;
+    }
+}
