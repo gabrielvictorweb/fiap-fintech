@@ -33,7 +33,7 @@
                 </a>
             </li>
             <li>
-                <a href="transactions.html" class="nav-link active">
+                <a href="transactions.html" class="nav-link link-dark">
                     <i class="bi bi-currency-exchange"></i>
                     Transações
                 </a>
@@ -45,13 +45,13 @@
                 </a>
             </li>
             <li>
-                <a href="transactions.html" class="nav-link link-dark">
+                <a href="incomes.html" class="nav-link link-dark">
                     <i class="bi bi-cash-stack"></i>
                     Receitas
                 </a>
             </li>
             <li>
-                <a href="expenses.html" class="nav-link link-dark">
+                <a href="expenses.html" class="nav-link active">
                     <i class="bi bi-cash-coin"></i>
                     Despesas
                 </a>
@@ -73,22 +73,22 @@
                 </a>
             </li>
             <li>
-                <a href="transactions.html" class="nav-link active">
+                <a href="transactions.html" class="nav-link link-dark">
                     <i class="bi bi-currency-exchange"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="credit-cards.html" class="nav-link link-dark">
+                <a href="credit-cards.html" class="nav-link link-dark" aria-current="page">
                     <i class="bi bi-credit-card-2-front-fill"></i>
                 </a>
             </li>
             <li>
-                <a href="transactions.html" class="nav-link link-dark">
+                <a href="incomes.html" class="nav-link link-dark">
                     <i class="bi bi-cash-stack"></i>
                 </a>
             </li>
             <li>
-                <a href="expenses.html" class="nav-link link-dark">
+                <a href="expenses.html" class="nav-link active">
                     <i class="bi bi-cash-coin"></i>
                 </a>
             </li>
@@ -99,7 +99,7 @@
 
     <div class="container-fluid h-100 overflow-auto">
         <nav class="navbar navbar-light">
-            <a class="navbar-brand">Transações</a>
+            <a class="navbar-brand">Despesas</a>
             <div class="dropdown">
                 <a href="#"
                    class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
@@ -116,67 +116,27 @@
             </div>
         </nav>
         <div class="card-wrapper"></div>
-        <div class="table-responsive">
-            <table class="table">
-                <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">De Conta</th>
-                    <th scope="col">Para Conta</th>
-                    <th scope="col">Observação</th>
-                    <th scope="col">Transferência fixa</th>
-                    <th scope="col">Ação</th>
-                    <th scope="col">Ação</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>R$ 19,00</td>
-                    <td>116494-6</td>
-                    <td>787854-9</td>
-                    <td></td>
-                    <td>Não</td>
-                    <td><a class="link-primary" href="edit-transactions.html">Editar</a></td>
-                    <td><a class="link-danger" href="transactions.html">Excluir</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>R$ 20,00</td>
-                    <td>687899-6</td>
-                    <td>558494-9</td>
-                    <td>Pagamento de Divida</td>
-                    <td>Sim</td>
-                    <td><a class="link-primary" href="edit-transactions.html">Editar</a></td>
-                    <td><a class="link-danger" href="transactions.html">Excluir</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>R$ 59,90</td>
-                    <td>245448-6</td>
-                    <td>345988-9</td>
-                    <td></td>
-                    <td>Sim</td>
-                    <td><a class="link-primary" href="edit-transactions.html">Editar</a></td>
-                    <td><a class="link-danger" href="transactions.html">Excluir</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>R$ 10,00</td>
-                    <td>145869-6</td>
-                    <td>658787-9</td>
-                    <td></td>
-                    <td>Não</td>
-                    <td><a class="link-primary" href="edit-transactions.html">Editar</a></td>
-                    <td><a class="link-danger" href="transactions.html">Excluir</a></td>
-                </tr>
-                </tbody>
-            </table>
-            <a href="new-transaction.html">
-                <button type="submit" class="btn btn-primary mt-3">ADICIONAR</button>
-            </a>
-        </div>
+        <form action="expenses.html">
+            <div class="form-group">
+                <label for="valor">Valor</label>
+                <input required value="200.00" type="number" min="1" step="any" class="form-control" id="valor" aria-describedby="emailHelp" placeholder="19,90">
+            </div>
+            <div class="form-group">
+                <label for="valor">Categoria</label>
+                <select class="form-control">
+                    <option>Selecione uma opção</option>
+                    <option>Farmacia</option>
+                    <option selected>Supermercado</option>
+                    <option>Diversão</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="observacao">Observação</label>
+                <textarea class="form-control" id="observacao" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">ATUALIZAR</button>
+        </form>
     </div>
 </main>
 <script src="../scripts/bootstrap.bundle.min.js"></script>
