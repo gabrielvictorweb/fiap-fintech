@@ -40,7 +40,6 @@
      border-radius: 50px;
 }
 
-
 @media screen and (min-width: 768px) {
     .desktop-menu {
         display: flex !important;
@@ -55,7 +54,15 @@
         max-width: 150px !important;
         margin: 0 auto;
     }
+}
 
+@media screen and (min-width: 900px) {
+    #charts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1336px) {
     #charts {
         grid-template-columns: 1fr 1fr 1fr;
     }
