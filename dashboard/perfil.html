@@ -45,13 +45,13 @@
                 </a>
             </li>
             <li>
-                <a href="incomes.html" class="nav-link link-dark">
+                <a href="incomes.html" class="nav-link active">
                     <i class="bi bi-cash-stack"></i>
                     Receitas
                 </a>
             </li>
             <li>
-                <a href="expenses.html" class="nav-link active">
+                <a href="expenses.html" class="nav-link link-dark">
                     <i class="bi bi-cash-coin"></i>
                     Despesas
                 </a>
@@ -83,12 +83,12 @@
                 </a>
             </li>
             <li>
-                <a href="incomes.html" class="nav-link link-dark">
+                <a href="incomes.html" class="nav-link active">
                     <i class="bi bi-cash-stack"></i>
                 </a>
             </li>
             <li>
-                <a href="expenses.html" class="nav-link active">
+                <a href="expenses.html" class="nav-link link-dark">
                     <i class="bi bi-cash-coin"></i>
                 </a>
             </li>
@@ -99,7 +99,7 @@
 
     <div class="container-fluid h-100 overflow-auto">
         <nav class="navbar navbar-light">
-            <a class="navbar-brand">Despesas</a>
+            <a class="navbar-brand">Perfil</a>
             <div class="dropdown">
                 <a href="#"
                    class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
@@ -116,41 +116,21 @@
             </div>
         </nav>
         <div class="card-wrapper"></div>
-        <div class="table-responsive">
-            <table class="table">
-                <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Obeservação</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>R$ 800,00</td>
-                    <td>Farmacia</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>R$ 200,00</td>
-                    <td>Supermercado</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>R$ 100,00</td>
-                    <td>Outro</td>
-                    <td>Boleto de Internet</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <a href="new-expenses.html">
-            <button type="submit" class="btn btn-primary mt-3">ADICIONAR</button>
-        </a>
+        <form action="perfil.html">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input value="Gabriel Victor" required type="text" class="form-control" id="name" aria-describedby="name" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input value="gabriel@localhost.com" required type="text" class="form-control" id="email" aria-describedby="email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+                <label for="number">Idade</label>
+                <input value="24" required type="number" class="form-control" id="number" aria-describedby="number" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">ATUALIZAR</button>
+        </form>
     </div>
 </main>
 <script src="../scripts/bootstrap.bundle.min.js"></script>
